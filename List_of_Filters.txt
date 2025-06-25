@@ -1,0 +1,10 @@
+currentPrice
+previousClose
+marketCap
+forwardPE
+trailingP/E
+dividendYield
+fiftyTwoWeekLow
+industry
+beta
+Volune
