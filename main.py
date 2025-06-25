@@ -9,23 +9,16 @@ def user_input_selection():
     1. Input filters
     2. See list of accepted filters
     """)
-
     return input()
 
-def list_of_accepted_filters():
-    acceptable_filters_list = [
-        "currentPrice","previousClose","marketCap","forwardPE","trailingPE",
-        "dividendYield","fiftyTwoWeekLow","sector","beta","volume"
-    ]
+def print_acceptable_filter():
+    pass
 
-    #TODO USE for-loop for filter list and user filter list
+def main():
+    user_input = user_input_selection()
 
-
-def main(): 
-    user_input_selection()
+    if user_input == "1": pass
+    if user_input == "2": pass
 
 
-
-
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
