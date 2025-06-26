@@ -28,8 +28,6 @@ def user_input_filter_acceptor():
     try:
         with open(user_file_filter_input, "r") as file:
             for line in file:
-                if any(phrase in line for phrase in ignore_phrase_n):
-                    continue
                 user_filter_list.append(line.lower())
     except Exception as e:
         # TODO Find what to do if list has bad inputs
