@@ -2,5 +2,5 @@
 
 ACCEPTABLE_FILTERS_LIST = [
     "currentprice","previousclose","marketcap","forwardpe","trailingpe",
-    "dividendyield","fiftytwoweeklow","sector","beta","volume"
+    "dividendyield","fiftytwoweeklow","sector","beta","volume","industry"
 ]

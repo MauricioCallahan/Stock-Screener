@@ -2,9 +2,9 @@ currentprice
 previousclose
 marketcap
 forwardpe
-trailingp/e
+trailingpe
 dividendyield
 fiftytwoweeklow
 industry
 beta
-Volume
+Volumeindustry
