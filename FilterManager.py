@@ -29,7 +29,8 @@ class FilterManager:
             # Dealing with inputs
             if option == "y":
                 self.remove_and_append()
-            #TODO DEAL WITH IF OPTION == n
+            elif option == "n":
+                return "Have a Good Day"
 
     def remove_and_append(self):
         # Reads file
