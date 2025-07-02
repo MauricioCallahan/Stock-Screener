@@ -17,7 +17,7 @@ def main():
     choice = input()
 
     if choice == "1":
-        file = MyInput.clean(input("Input File: "))
+        file = input("Input File: ")
         manager = FilterManager(file)
         manager.load_filters()
         manager.fix_rejected_filters()

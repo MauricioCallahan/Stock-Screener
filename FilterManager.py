@@ -1,5 +1,6 @@
 import constant as const_var
 from SimplifyClases import MyInput
+import error_manager
 
 class FilterManager:
 
@@ -11,15 +12,25 @@ class FilterManager:
 
     # This method reads from file and accepts or rejects user given filters
     def load_filters(self):
-        with open(self.filepath, "r") as file:
-            # Grabs both line_num and line ex.(0, line)
-            for line_num, line in enumerate(file, start=1):
-                line = line.lower().strip()
-                # checking with accepted filters
-                if line in const_var.ACCEPTABLE_FILTERS_LIST:
-                    self.accepted_filters[line] = line_num
-                else:
-                    self.rejected_filters[line] = line_num
+        try:
+
+            with open(self.filepath, "r") as file:
+                # Grabs both line_num and line ex.(0, line)
+                for line_num, line in enumerate(file, start=1):
+                    line = line.lower().strip()
+                    # checking with accepted filters
+                    if line in const_var.ACCEPTABLE_FILTERS_LIST:
+                        self.accepted_filters[line] = line_num
+                    else:
+                        self.rejected_filters[line] = line_num
+        except FileNotFoundError as e:
+            # Deals with bad file somewhere else
+            error_manager.set_file_error(True)
+
+        error_manager.check_file_error(self.filepath)
+        
+            
+    
 
     # This method, with the rejected filters, gives the user the ability to edit their list
     def fix_rejected_filters(self):
@@ -50,3 +61,4 @@ class FilterManager:
 
         with open(self.filepath, "w") as file:
             file.writelines(lines)
+
