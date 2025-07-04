@@ -1,4 +1,3 @@
-currentprice
 previousclose
 marketcap
 forwardpe
@@ -7,4 +6,4 @@ dividendyield
 fiftytwoweeklow
 industry
 beta
-industry
+currentprice

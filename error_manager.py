@@ -7,7 +7,7 @@ def set_file_error(val: bool):
     global FILE_ERROR
     FILE_ERROR = val
 
-def get_file_error(val: bool):
+def get_file_error() -> bool:
     return FILE_ERROR
 
 def check_file_error(filepath):

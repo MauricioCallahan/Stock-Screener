@@ -56,9 +56,16 @@ class FilterManager:
             if i not in self.rejected_filters.values()
         ]
         # New filter(s)
-        new_filter = MyInput.clean("Enter a replacement filter: ")
-        lines.append(new_filter + "\n")
 
+        while True:
+            new_filter = MyInput.clean("Enter a replacement filter: ")
+            if new_filter in const_var.ACCEPTABLE_FILTERS_LIST:
+                lines.append(new_filter + "\n")
+                break
+            else:
+                print("The new filter has not been accepted, please enter another one")
+        
+        # Puts lines back into file 
         with open(self.filepath, "w") as file:
             file.writelines(lines)
 
